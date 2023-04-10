@@ -8,13 +8,12 @@ MarkupSafe==2.0.1
 PyMySQL==1.0.2
 SQLAlchemy==1.4.29
 Werkzeug==2.0.2
-Python==3.6.13
 numpy==1.15.2
 scikit-image==0.14.0
 PyTorch==1.0.2
 torchvision==0.2.1
 pillow==8.1.1
-opencv-python
+opencv
 paddlepaddle
 paddlehub==2.3.1
 gradio==3.16.1
