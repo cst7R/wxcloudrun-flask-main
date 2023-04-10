@@ -22,7 +22,6 @@ def count():
 
     # 获取请求体参数
     params = request.get_json()
-
     # 检查action参数
     if 'action' not in params:
         return make_err_response('缺少action参数')
@@ -31,7 +30,7 @@ def count():
     action = params['action']
 
     # 执行自增操作
-    if action == 'inc':
+    if action == 'in':
         counter = query_counterbyid(1)
         if counter is None:
             counter = Counters()
