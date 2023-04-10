@@ -13,7 +13,7 @@ scikit-image==0.14.0
 PyTorch==1.0.2
 torchvision==0.2.1
 pillow==8.1.1
-opencv-python==3.6.8
-paddlepaddle
+opencv-python==3.4.0.14
+paddlepaddle==3.5.1
 paddlehub==2.3.1
 gradio==3.16.1
