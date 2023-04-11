@@ -11,7 +11,7 @@ Werkzeug==2.0.2
 scikit-image==0.14.0
 numpy==1.15.2
 PyTorch==1.0.2
-torchvision==0.2.2
+torchvision
 pillow==8.1.1
 paddlepaddle==2.4.1
 paddlehub==2.3.1
