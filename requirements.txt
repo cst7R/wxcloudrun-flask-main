@@ -9,3 +9,13 @@ PyMySQL==1.0.2
 SQLAlchemy==1.4.29
 Werkzeug==2.0.2
 scikit-image==0.14.0
+numpy==1.18.2
+PyTorch==1.0.2
+torchvision
+pillow==8.1.1
+matplotlib
+opencv-python==4.5.1.48
+paddlepaddle==2.4.1
+paddlehub==2.3.1
+gradio==3.16.1
+setuptools-scm
