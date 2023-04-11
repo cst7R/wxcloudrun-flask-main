@@ -2,13 +2,13 @@
 # 选择基础镜像。如需更换，请到[dockerhub官方仓库](https://hub.docker.com/_/python?tab=tags)自行选择后替换。
 FROM ubuntu:20.04
 
-RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
-RUN  apt-get clean
-
 # 更新软件包列表并安装ca-certificates
 RUN apt-get update \
 && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates \
 && rm -rf /var/lib/apt/lists/*
+
+RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
+RUN  apt-get clean
 
 # 更新软件包列表并安装Python3和pip
 RUN apt-get update \
