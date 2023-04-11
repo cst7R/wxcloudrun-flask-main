@@ -5,6 +5,11 @@ FROM ubuntu:20.04
 RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
 RUN  apt-get clean
 
+# 更新软件包列表并安装ca-certificates
+RUN apt-get update \
+&& DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates \
+&& rm -rf /var/lib/apt/lists/*
+
 # 更新软件包列表并安装Python3和pip
 RUN apt-get update \
 && DEBIAN_FRONTEND=noninteractive apt-get install -y python3 python3-pip \
