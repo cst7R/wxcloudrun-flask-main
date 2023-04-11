@@ -21,11 +21,11 @@ COPY . /app
 # 设定当前的工作目录
 WORKDIR /app
 
-RUN pip3 config set global.index-url http://mirrors.aliyun.com/pypi/simple
-RUN pip3 config set install.trusted-host mirrors.aliyun.com
-RUN pip3 install pip -U
+RUN pip3 config set global.index-url http://mirrors.aliyun.com/pypi/simple \
+&& pip3 config set install.trusted-host mirrors.aliyun.com \
+&& pip3 install pip -U \
 # 安装依赖包
-RUN pip3 install -r requirements.txt
+&& pip3 install -r requirements.txt
 
 # 暴露端口
 # 此处端口必须与「服务设置」-「流水线」以及「手动上传代码包」部署时填写的端口一致，否则会部署失败。
