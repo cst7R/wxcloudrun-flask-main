@@ -4,7 +4,7 @@ from run import app
 from wxcloudrun.dao import delete_counterbyid, query_counterbyid, insert_counter, update_counterbyid
 from wxcloudrun.model import Counters
 from wxcloudrun.response import make_succ_empty_response, make_succ_response, make_err_response
-from demo import infer
+#from demo import infer
 
 @app.route('/')
 def index():
@@ -29,10 +29,10 @@ def count():
 
     # 按照不同的action的值，进行不同的操作
     action = params['action']
-    img = params['image']
+    #img = params['image']
     # 执行自增操作
     if action == 'in':
-        im=infer(img)[0]
+        #im=infer(img)[0]
         counter = query_counterbyid(1)
         if counter is None:
             counter = Counters()
@@ -46,7 +46,7 @@ def count():
             counter.count += 1
             counter.updated_at = datetime.now()
             update_counterbyid(counter)
-        return make_succ_response(im)
+        return make_succ_response(counter)
 
     # 执行清0操作
     elif action == 'clear':
