@@ -9,7 +9,7 @@ PyMySQL==1.0.2
 SQLAlchemy==1.4.29
 Werkzeug==2.0.2
 scikit-image==0.14.0
-numpy==1.15.2
+numpy==1.11.3
 PyTorch==1.0.2
 torchvision
 pillow==8.1.1
